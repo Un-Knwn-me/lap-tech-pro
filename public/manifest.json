@@ -1,0 +1,26 @@
+{
+  "name": "LAP PRO TECH - Electronics Repair Services",
+  "short_name": "LapProTech",
+  "description": "Your trusted partner for laptop, TV, projector, and electronics repair services. Professional, reliable, and affordable solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon0.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icon1.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
