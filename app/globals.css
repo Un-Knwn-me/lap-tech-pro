@@ -126,3 +126,20 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
+
+/* Mobile menu solid background */
+.mobile-menu-overlay {
+  background-color: #000000 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+}
+
+.mobile-menu-overlay * {
+  background-color: transparent !important;
+}
+
+.mobile-menu-overlay .bg-black {
+  background-color: #000000 !important;
+  opacity: 1 !important;
+}

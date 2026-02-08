@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
+import ServiceButton from '@/components/ServiceButton';
 
 const products = [
   {
@@ -98,9 +99,14 @@ export default function ProductsPage() {
                 </div>
                 
                 {/* Enquiry Button - Flush with bottom edge */}
-                <button className="w-full bg-gradient-to-r from-purple-900 to-purple-600 text-purple-100 py-3 px-4 rounded-b-2xl font-semibold hover:from-purple-800 hover:to-purple-700 hover:scale-105 transition-all duration-300 mt-auto transform">
+                <ServiceButton 
+                  title="Enquiry Now"
+                  variant="outline"
+                  size="sm"
+                  className="w-full bg-gradient-to-r from-purple-900 to-purple-600 text-white py-3 px-4 rounded-b-2xl font-semibold hover:from-purple-700 hover:to-purple-600 hover:scale-105 transition-all duration-300 mt-auto transform"
+                >
                   Enquiry Now
-                </button>
+                </ServiceButton>
               </div>
             ))}
           </div>
@@ -117,9 +123,13 @@ export default function ProductsPage() {
             We provide customized electronics solutions tailored to your specific needs and budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-orange-400 to-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-orange-500 hover:to-yellow-600 transition-all duration-300 shadow-lg">
+            <ServiceButton 
+              title="Request Quote"
+              variant="secondary"
+              size="md"
+            >
               Request Quote
-            </button>
+            </ServiceButton>
             <a 
               href="tel:+919786667567"
               className="bg-gradient-to-l from-purple-600 to-purple-800 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-purple-800 transition-all duration-300 shadow-lg inline-block text-center"

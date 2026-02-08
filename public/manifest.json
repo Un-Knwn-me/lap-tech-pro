@@ -1,26 +1,91 @@
 {
-  "name": "LAP PRO TECH - Electronics Repair Services",
-  "short_name": "LapProTech",
-  "description": "Your trusted partner for laptop, TV, projector, and electronics repair services. Professional, reliable, and affordable solutions.",
+  "name": "Lap Pro Tech - Professional Electronics Repair Services in Coimbatore",
+  "short_name": "Lap Pro Tech",
+  "description": "Expert electronics repair services in Coimbatore. Laptop, TV, projector, CCTV repair with same-day service, warranty, and original parts. 20+ years experience.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "background_color": "#7F41D4",
+  "theme_color": "#7F41D4",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["business", "utilities", "productivity"],
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "/Logo.svg",
       "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
       "type": "image/x-icon"
     },
     {
-      "src": "/icon0.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "/icon1.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/icon1.png",
-      "sizes": "any",
-      "type": "image/png"
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
     }
-  ]
+  ],
+  "screenshots": [
+    {
+      "src": "/Logo.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Lap Pro Tech Electronics Repair Services"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Service",
+      "short_name": "Book Service",
+      "description": "Book electronics repair service",
+      "url": "/#service-cta",
+      "icons": [
+        {
+          "src": "/Logo.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Get Quote",
+      "short_name": "Get Quote",
+      "description": "Get quote for electronics repair",
+      "url": "/#service-cta",
+      "icons": [
+        {
+          "src": "/Logo.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Find Us",
+      "short_name": "Find Us",
+      "description": "Find our service center location",
+      "url": "/#find-us-here",
+      "icons": [
+        {
+          "src": "/Logo.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
 }

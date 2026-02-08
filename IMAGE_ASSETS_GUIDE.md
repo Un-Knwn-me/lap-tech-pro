@@ -1,6 +1,6 @@
 # Image Assets Management Guide
 
-This guide explains how to properly manage images and assets in your LAP PRO TECH Next.js project.
+This guide explains how to properly manage images and assets in your Lap Pro Tech Next.js project.
 
 ## 📁 **Directory Structure**
 
@@ -167,4 +167,3 @@ backgroundImage: "url('/images/hero/hero-bg.jpg')";
 - Use appropriate image formats
 - Consider using Next.js Image component
 - Implement lazy loading for non-critical images
-

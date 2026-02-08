@@ -1,3 +1,5 @@
+import ServiceButton from './ServiceButton';
+
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-purple-900 to-purple-800 text-white py-16">
@@ -17,13 +19,12 @@ export default function Footer() {
                 </svg>
               </div>
               <div className="ml-8">
-                <span className="text-white font-bold text-lg">LAP PRO</span>
-                <span className="bg-gradient-to-r from-orange-400 to-yellow-500 text-black px-2 py-1 rounded text-sm font-bold ml-1">TECH</span>
+                <span className="text-white font-bold text-lg">Lap Pro</span>
+                <span className="bg-gradient-to-r from-orange-400 to-yellow-500 text-black px-2 py-1 rounded text-sm font-bold ml-1">Tech</span>
               </div>
             </div>
             <p className="text-purple-200 leading-relaxed">
-              Your trusted partner for all electronics repair and maintenance services. 
-              Professional, reliable, and affordable solutions.
+            Your trusted partner for all electronics repair and maintenance services — providing Professional, Reliable, and Affordable solutions
             </p>
           </div>
 
@@ -82,7 +83,7 @@ export default function Footer() {
               
               {/* Instagram */}
               <a 
-                href="https://instagram.com/lapprotech" 
+                href="https://instagram.com/lap_pro_tech" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
@@ -95,16 +96,20 @@ export default function Footer() {
             </div>
             
             <div className="mt-8">
-              <button className="bg-gradient-to-r from-orange-400 to-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-orange-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105">
+              <ServiceButton 
+                title="Get Quote Now"
+                variant="secondary"
+                size="md"
+              >
                 Get Quote Now
-              </button>
+              </ServiceButton>
             </div>
           </div>
         </div>
         
         <div className="border-t border-purple-700 mt-12 pt-8 text-center">
           <p className="text-purple-200">
-            © {new Date().getFullYear()} LAP PRO TECH. All rights reserved. | Professional Electronics Repair Services.  | Developed by <a href="http://spatialcontinuum.com/" target="_blank" className="text-orange-400 hover:text-orange-500">Spatial Continuum</a>
+            © {new Date().getFullYear()} Lap Pro Tech. All rights reserved. | Professional Electronics Repair Services.  | Developed by <a href="http://spatialcontinuum.com/" target="_blank" className="text-orange-400 hover:text-orange-500">Spatial Continuum</a>
           </p>
         </div>
       </div>

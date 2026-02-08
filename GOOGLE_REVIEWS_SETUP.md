@@ -1,6 +1,6 @@
-# Google Reviews Integration Setup
+# Google Reviews Setup Guide
 
-This guide will help you set up Google Reviews integration for your LAP PRO TECH website.
+This guide will help you set up Google Reviews integration for your Lap Pro Tech website.
 
 ## Prerequisites
 

@@ -1,6 +1,6 @@
 export default function GoogleMap() {
   return (
-    <section id="contact" className="py-20 bg-gray-100 scroll-mt-20">
+    <section id="find-us-here" className="py-20 bg-gray-100 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 fade-in">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-yellow-500 bg-clip-text text-transparent mb-4">
@@ -16,7 +16,7 @@ export default function GoogleMap() {
           <div className="relative">
             <div className="bg-white p-4 rounded-2xl shadow-lg hover-scale">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d979.0402509254045!2d76.96458826950364!3d11.026544315667724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDAxJzM1LjYiTiA3NsKwNTcnNTQuOCJF!5e0!3m2!1sen!2sin!4v1755792732034!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.237387235749!2d76.9602209!3d11.020807800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859efb1dcf93f%3A0x5b968a379f08ce2!2sLAPPROTECH!5e0!3m2!1sen!2sin!4v1761883865925!5m2!1sen!2sin"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
@@ -43,8 +43,8 @@ export default function GoogleMap() {
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Address</h4>
                     <p className="text-gray-600">
-                      158-E, First Floor, Sanganoor Main Road,<br/>
-                      Rathinapuri, Coimbatore, Tamil Nadu 641027
+                    No.22/28 First Floor, 4th Street,Tatabad, 
+                    (Vinayakar Temple Opposite Building), Coimbatore 641012
                     </p>
                   </div>
                 </div>
@@ -88,9 +88,14 @@ export default function GoogleMap() {
               </div>
               
               <div className="mt-8">
-                <button className="bg-gradient-to-r from-orange-400 to-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-orange-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 w-full">
+                <a 
+                  href="https://maps.app.goo.gl/paoReaNdUa8pSDUt5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-orange-400 to-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-orange-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 w-full inline-block text-center"
+                >
                   Get Directions
-                </button>
+                </a>
               </div>
             </div>
           </div>

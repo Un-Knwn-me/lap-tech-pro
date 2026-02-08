@@ -1,3 +1,5 @@
+import ServiceButton from './ServiceButton';
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-800">
@@ -24,9 +26,14 @@ export default function Hero() {
             Laptop, TV, Projector, Chip, Level & More - We&apos;ve Got You Covered.
           </p>
           
-          <button className="bg-gradient-to-r from-purple-800 via-purple-700 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-900 hover:via-purple-800 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg fade-in-delay-3">
+          <ServiceButton 
+            title="Book & Service Now"
+            variant="primary"
+            size="lg"
+            className="fade-in-delay-3"
+          >
             Book & Service now
-          </button>
+          </ServiceButton>
         </div>
       </div>
       

@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
+import ServiceButton from '@/components/ServiceButton';
 
 const services = [
   {
@@ -139,9 +140,13 @@ export default function ServicesPage() {
             Our expert technicians are ready to diagnose and fix your electronics with precision and care.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-orange-400 to-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-orange-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <ServiceButton 
+              title="Book Service Now"
+              variant="secondary"
+              size="md"
+            >
               Book Service Now
-            </button>
+            </ServiceButton>
             <a 
               href="tel:+919786667567"
               className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg inline-block text-center"

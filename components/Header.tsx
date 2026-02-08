@@ -2,26 +2,38 @@
 
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleContactClick = () => {
     // Check if we're on the home page
     if (window.location.pathname === '/') {
-      // If on home page, scroll to contact section
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ 
+      // Navigate to the "Find Us Here" section
+      const findUsSection = document.getElementById('find-us-here');
+      if (findUsSection) {
+        findUsSection.scrollIntoView({ 
           behavior: 'smooth',
           block: 'start'
         });
       }
     } else {
-      // If on other pages, navigate to home page with hash
-      router.push('/#contact');
+      // If on other pages, navigate to home page with find-us-here hash
+      router.push('/#find-us-here');
     }
+    // Close mobile menu after clicking
+    setIsMobileMenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -29,7 +41,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
             <div className="w-12 h-12 p-2">
               <svg width="64" height="32" viewBox="0 0 256 143" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M30.8908 87.671C-6.97529 76.732 16.5858 48.9636 16.5858 48.9636C16.5858 48.9636 -17.9144 70.0002 15.7444 91.8784C49.4031 113.756 163.842 63.2685 163.842 63.2685C163.842 63.2685 68.7568 98.6101 30.8908 87.671Z" fill="#7F41D4" stroke="#760595"/>
@@ -41,12 +53,12 @@ export default function Header() {
               </svg>
             </div>
             <div className="ml-8">
-              <span className="text-white font-bold text-lg">LAP PRO</span>
-              <span className="bg-gradient-to-r from-orange-400 to-yellow-500 text-black px-2 py-1 rounded text-sm font-bold ml-1">TECH</span>
+              <span className="text-white font-bold text-lg">Lap Pro</span>
+              <span className="bg-gradient-to-r from-orange-400 to-yellow-500 text-black px-2 py-1 rounded text-sm font-bold ml-1">Tech</span>
             </div>
           </Link>
 
-          {/* Navigation and Contact Button - Right Aligned */}
+          {/* Desktop Navigation and Contact Button - Right Aligned */}
           <div className="hidden md:flex items-center space-x-8">
             <nav className="flex space-x-8">
               <Link 
@@ -91,8 +103,101 @@ export default function Header() {
               Contact Us
             </button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMobileMenu}
+            className="md:hidden flex flex-col justify-center items-center w-8 h-8 text-white hover:text-orange-400 transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-current transition-all duration-300 mt-1 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-current transition-all duration-300 mt-1 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div 
+          className="md:hidden fixed inset-0 z-[9999] bg-black/95"
+          style={{
+            backgroundColor: '#000000 !important',
+            background: '#000000 !important',
+            backgroundImage: 'none !important',
+            backdropFilter: 'none !important',
+            WebkitBackdropFilter: 'none !important',
+            opacity: '1 !important',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            right: '0',
+            bottom: '0',
+            width: '100vw',
+            height: '100vh',
+            zIndex: 9999
+          }}
+        >
+          <div className="flex flex-col items-center justify-center min-h-screen py-20 px-6 relative">
+            {/* Mobile Navigation Links */}
+            <nav className="flex flex-col items-center space-y-8 mb-12">
+              <Link 
+                href="/" 
+                className={`text-2xl font-semibold transition-colors ${
+                  pathname === '/' ? 'text-orange-400' : 'text-white hover:text-orange-400'
+                }`}
+                onClick={closeMobileMenu}
+              >
+                Home
+              </Link>
+              <Link 
+                href="/services" 
+                className={`text-2xl font-semibold transition-colors ${
+                  pathname === '/services' ? 'text-orange-400' : 'text-white hover:text-orange-400'
+                }`}
+                onClick={closeMobileMenu}
+              >
+                Our Services
+              </Link>
+              <Link 
+                href="/products" 
+                className={`text-2xl font-semibold transition-colors ${
+                  pathname === '/products' ? 'text-orange-400' : 'text-white hover:text-orange-400'
+                }`}
+                onClick={closeMobileMenu}
+              >
+                Our Products
+              </Link>
+              <Link 
+                href="/about" 
+                className={`text-2xl font-semibold transition-colors ${
+                  pathname === '/about' ? 'text-orange-400' : 'text-white hover:text-orange-400'
+                }`}
+                onClick={closeMobileMenu}
+              >
+                About Us
+              </Link>
+            </nav>
+
+            {/* Mobile Contact Button */}
+            <button 
+              onClick={handleContactClick}
+              className="bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-purple-800 hover:via-purple-700 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-md text-lg font-semibold"
+            >
+              Contact Us
+            </button>
+
+            {/* Close Button */}
+            <button
+              onClick={closeMobileMenu}
+              className="absolute top-8 right-6 text-white hover:text-orange-400 transition-colors text-2xl bg-black rounded-full w-10 h-10 flex items-center justify-center border border-white/20"
+              aria-label="Close mobile menu"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

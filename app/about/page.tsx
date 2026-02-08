@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ServiceButton from '@/components/ServiceButton';
 
 export default function AboutPage() {
   return (
@@ -21,7 +22,7 @@ export default function AboutPage() {
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 fade-in-delay-1">
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p className="text-lg">
-                Since 2006, we are a trusted name in mobile, laptop, and TV servicing with over 20 years of hands-on experience. Based in the heart of Coimbatore, our 5-member expert team delivers reliable, affordable, and professional repair solutions across the city.
+                Since 2006, we are a trusted name in mobile, laptop, and TV servicing with over 20 years of hands-on experience. Based in the heart of Coimbatore, our 20-member expert team delivers reliable, affordable, and professional repair solutions across the city.
               </p>
               
               <p className="text-lg">
@@ -97,7 +98,7 @@ export default function AboutPage() {
                 <span className="text-white text-2xl">👥</span>
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">Expert Team</h3>
-              <p className="text-gray-600">5-member professional team</p>
+              <p className="text-gray-600">20-member professional team</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
@@ -153,6 +154,34 @@ export default function AboutPage() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Booking CTA */}
+      <section className="py-12 bg-gradient-to-r from-orange-50 to-yellow-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            Ready to Get Started?
+          </h2>
+          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+            Book your service appointment or get a quote for your electronics repair needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <ServiceButton 
+              title="Book Service Now"
+              variant="primary"
+              size="lg"
+            >
+              Book Service Now
+            </ServiceButton>
+            <ServiceButton 
+              title="Get Quote Now"
+              variant="secondary"
+              size="lg"
+            >
+              Get Quote Now
+            </ServiceButton>
           </div>
         </div>
       </section>
